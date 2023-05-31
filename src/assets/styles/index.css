@@ -18,7 +18,6 @@
   color: var(--light_text);
   /* add text-shadow and box shadow */
   text-shadow: var(--dark_text) 1px 0 5px;
-  box-shadow: inset   0px 0px 4px var(--seccond_background);
 }
 ::-webkit-scrollbar {
   width: 0;

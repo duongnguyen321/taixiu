@@ -1,0 +1,12 @@
+.header {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon {
+  text-shadow: none;
+}
+.row {
+  gap: 0.4rem;
+}

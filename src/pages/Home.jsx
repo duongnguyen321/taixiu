@@ -8,6 +8,7 @@ import Col from "../components/Col";
 import Row from "../components/Row";
 import Box from "../components/Box";
 import homeStyle from "./home.module.css";
+import Header from "../Layout/Header";
 
 const { game: getAPIGame, data: getAPIData } = API;
 
@@ -78,74 +79,77 @@ export default function Home() {
   const { data: resData, response, type } = data;
 
   return (
-    <Box>
-      <Col>
-        <Row>
-          <Col>
-            {resData?.length ? (
-              <>
-                <h3 className="score">Điểm: {response}</h3>
-                <ul className={homeStyle.list_group}>
-                  {resData.map((item, i) => (
-                    <li className="list_item" key={i}>
-                      <Row className={homeStyle.box_icon}>
-                        Xúc Xắc {i + 1}: {item} {getIconDice(parseInt(item))}
-                      </Row>
-                    </li>
-                  ))}
-                </ul>
-                <h1 className="type">{type}</h1>
-              </>
-            ) : (
-              <>
-                <h3 className="score">Bạn Chưa Đổ Xúc Xắc!</h3>
-              </>
-            )}
-            {loading ? (
-              <h3>Đang Đổ Xúc Xắc...</h3>
-            ) : (
-              <h3>
-                Trang game được tạo bởi{" "}
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://duong.vercel.app"
-                >
-                  Dương
-                </a>
-              </h3>
-            )}
-          </Col>
-          <Col>
-            {history.map(({ response, type, data: resData }, i) => (
-              <Row key={i} className={homeStyle.box_history}>
-                <h3 className="score">Điểm: {response}</h3>
-                <ul className={homeStyle.list_group}>
-                  {resData.map((item, i) => (
-                    <li className="list_item" key={i}>
-                      <Row className={homeStyle.box_icon}>
-                        Xúc Xắc {i + 1}: {item} {getIconDice(parseInt(item))}
-                      </Row>
-                    </li>
-                  ))}
-                </ul>
-                <h1 className="type">{type}</h1>
+    <>
+      <Header history={history} />
+      <Box>
+        <Col>
+          <Row>
+            <Col>
+              {resData?.length ? (
+                <>
+                  <h3 className="score">Điểm: {response}</h3>
+                  <ul className={homeStyle.list_group}>
+                    {resData.map((item, i) => (
+                      <li className="list_item" key={i}>
+                        <Row className={homeStyle.box_icon}>
+                          Xúc Xắc {i + 1}: {item} {getIconDice(parseInt(item))}
+                        </Row>
+                      </li>
+                    ))}
+                  </ul>
+                  <h1 className="type">{type}</h1>
+                </>
+              ) : (
+                <>
+                  <h3 className="score">Bạn Chưa Đổ Xúc Xắc!</h3>
+                </>
+              )}
+              {loading ? (
+                <h3>Đang Đổ Xúc Xắc...</h3>
+              ) : (
+                <h3>
+                  Trang game được tạo bởi{" "}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://duong.vercel.app"
+                  >
+                    Dương
+                  </a>
+                </h3>
+              )}
+            </Col>
+            <Col>
+              {history.map(({ response, type, data: resData }, i) => (
+                <Row key={i} className={homeStyle.box_history}>
+                  <h3 className="score">Điểm: {response}</h3>
+                  <ul className={homeStyle.list_group}>
+                    {resData.map((item, i) => (
+                      <li className="list_item" key={i}>
+                        <Row className={homeStyle.box_icon}>
+                          Xúc Xắc {i + 1}: {item} {getIconDice(parseInt(item))}
+                        </Row>
+                      </li>
+                    ))}
+                  </ul>
+                  <h1 className="type">{type}</h1>
+                </Row>
+              ))}
+            </Col>
+          </Row>
+          <Form onSubmit={getGame}>
+            <Col>
+              <Row>
+                <span>Số Xúc Xắc: {count}</span>
+                <Range value={count} min="2" max="10" onChange={handleChange} />
               </Row>
-            ))}
-          </Col>
-        </Row>
-        <Form onSubmit={getGame}>
-          <Col>
-            <Row>
-              <span>Số Xúc Xắc: {count}</span>
-              <Range value={count} min="2" max="10" onChange={handleChange} />
-            </Row>
-            <Button disabled={loading} type="submit">
-              Play!
-            </Button>
-          </Col>
-        </Form>
-      </Col>
-    </Box>
+              <Button disabled={loading} type="submit">
+                Play!
+              </Button>
+            </Col>
+          </Form>
+        </Col>
+      </Box>
+    </>
   );
 }

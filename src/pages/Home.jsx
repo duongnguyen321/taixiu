@@ -48,7 +48,7 @@ export default function Home() {
       }, 500);
     }
   };
-useEffect(() => getData,[]);
+  useEffect(() => getData, []);
   const handleChange = (e) => {
     setCount(e.target.value);
   };

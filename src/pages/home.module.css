@@ -1,0 +1,7 @@
+.box_history {
+  min-width: 440px;
+  height: auto;
+  border: var(--seccond_button) 2px solid;
+  padding:0 2rem;
+  border-radius: .5rem;
+}

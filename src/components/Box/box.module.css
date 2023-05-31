@@ -1,0 +1,10 @@
+.box {
+  min-width: 80vw;
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: var(--seccond_button) 2px solid;
+  border-radius: 1rem;
+  padding: 2rem;
+}

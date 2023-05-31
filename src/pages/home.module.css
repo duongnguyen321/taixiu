@@ -1,7 +1,20 @@
 .box_history {
   min-width: 440px;
   height: auto;
+
   border: var(--seccond_button) 2px solid;
-  padding:0 2rem;
-  border-radius: .5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+
+}
+.box_icon {
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+.list_group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
 }

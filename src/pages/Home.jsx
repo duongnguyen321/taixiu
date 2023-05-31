@@ -69,7 +69,6 @@ export default function Home() {
       }, 500);
     }
   };
-  useEffect(() => getData, []);
   useEffect(() => setCount(localStorage.count || 2), []);
   const handleChange = async (e) => {
     await setCount(e.target.value);

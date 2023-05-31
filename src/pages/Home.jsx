@@ -32,12 +32,12 @@ export default function Home() {
   };
 
   const getCountForAPI = () => {
-    if (count > 7) {
-      return Math.round(count / 3);
-    } else if (count > 5) {
-      return Math.round(count / 2);
+    if (count > 8) {
+      return Math.floor(count / 3) - 1;
+    } else if (count > 6) {
+      return Math.floor(count / 3);
     } else {
-      return 5;
+      return 3;
     }
   };
   const getIconDice = (value) => {

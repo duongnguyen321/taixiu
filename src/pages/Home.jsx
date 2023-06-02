@@ -92,11 +92,11 @@ export default function Home() {
       if (choice === "1") {
         const githubUrl = "https://github.com/duongnguyen321";
         localStorage.setItem("followChoice", "github");
-        window.open(githubUrl, "_blank");
+        const open = window.open(githubUrl, "_blank");
       } else if (choice === "2") {
         const facebookUrl = "https://fb.com/duongnguyen321";
         localStorage.setItem("followChoice", "facebook");
-        window.open(facebookUrl, "_blank");
+        const open = window.open(facebookUrl, "_blank");
       }
     }
   }, [money]);

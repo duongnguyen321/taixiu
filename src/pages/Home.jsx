@@ -109,6 +109,7 @@ export default function Home() {
         if (currentFollowChoice === followChoice) {
           setMoney((prevMoney) => prevMoney + 100000);
           localStorage.money = (money + 100000).toString();
+          toast.success("Bạn đã được cộng 100000$ điểm!");
         } else {
           toast.error("Bạn có vẻ chưa follow tôi :(");
         }
@@ -127,7 +128,7 @@ export default function Home() {
         setDisableBetButton(false);
       }
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [money]);
 
   useEffect(() => {
@@ -250,7 +251,7 @@ export default function Home() {
                   </a>
                 </h3>
               )}
-              <h2>Tổng ví: {money}</h2>
+              <h2>Tổng ví: {money}$</h2>
             </Col>
             <Col>
               {history.map(({ response, type, data: resData }, i) => (

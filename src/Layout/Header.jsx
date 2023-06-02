@@ -29,13 +29,21 @@ export default function Header({ history: data }) {
               ></i>
               <span>Tài</span>
             </Col>
-          ) : (
+          ) : type === "Xỉu" ? (
             <Col key={i}>
               <i
                 className={`fa-sharp fa-regular fa-circle-dot ${headerStyle.icon}`}
                 style={{ color: "blue" }}
               ></i>
               <span>Xỉu</span>
+            </Col>
+          ) : (
+            <Col key={i}>
+              <i
+                className={`fa-sharp fa-regular fa-circle-dot ${headerStyle.icon}`}
+                style={{ color: "#333" }}
+              ></i>
+              <span>Bộ</span>
             </Col>
           );
         })}

@@ -25,7 +25,7 @@ export default function GameData({ homeStyle, data, loading, money, history }) {
 
   return (
     <Row>
-      <Col>
+      <Col className={homeStyle.mobile}>
         {resData?.length ? (
           <>
             <h3 className={homeStyle.score}>

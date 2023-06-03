@@ -175,6 +175,7 @@ export default function Home() {
             handleBet={handleBet}
             disableBetButton={disableBetButton}
             bet={bet}
+            money={money}
           />
         </Col>
       </Box>

@@ -41,3 +41,8 @@
 .bet_button_3 {
   background-color: red !important;
 }
+@media (max-width: 770px) {
+  .mobile {
+    display: none !important;
+  }
+}

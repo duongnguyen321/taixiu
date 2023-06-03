@@ -33,11 +33,11 @@
   text-align: center;
 }
 .bet_button_1 {
-  background-color: blue;
+  background-color: blue !important;
 }
 .bet_button_2 {
-  background-color: var(--main_button);
+  background-color: var(--main_button) !important;
 }
 .bet_button_3 {
-  background-color: red;
+  background-color: red !important;
 }

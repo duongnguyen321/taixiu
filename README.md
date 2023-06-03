@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Taixiu
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Taixiu là một ứng dụng trò chơi đổ xúc xắc (tài xỉu) được phát triển bằng React.
 
-## Available Scripts
+## Yêu cầu
 
-In the project directory, you can run:
+- Node.js v12 trở lên
+- Trình duyệt web hiện đại hỗ trợ React
 
-### `npm start`
+## Cài đặt
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Bước 1: Clone repository về máy tính của bạn.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    git clone https://github.com/duongnguyen321/taixiu.git
 
-### `npm test`
+Bước 2: Di chuyển vào thư mục dự án.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    cd taixiu
 
-### `npm run build`
+Bước 3: Cài đặt các dependencies.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Sử dụng
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Bước 1: Khởi chạy ứng dụng trong môi trường phát triển.
 
-### `npm run eject`
+    npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Bước 2: Truy cập ứng dụng qua địa chỉ http://localhost:3000 trong trình duyệt web của bạn.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Các lệnh khác
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+\- **npm start:** Khởi chạy ứng dụng trong môi trường phát triển.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+\- **npm run push:** Push code và đưa codee lên vercel chỉ bằng một lệnh.
 
-## Learn More
+    Nếu bạn muốn thêm title cho commit hãy thêm `-- "text"` hoặc mặc định là `Update Code`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Ví dụ `npm run push -- "First Commit"`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Đóng góp
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Nếu bạn muốn đóng góp vào dự án Taixiu, vui lòng tạo pull request trên GitHub hoặc gửi ý kiến đóng góp qua [Facebook](https://fb.com/duongnguyen321) || [GitHub](https://github.com/duongnguyen321) .

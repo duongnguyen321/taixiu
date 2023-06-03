@@ -42,9 +42,6 @@
   background-color: red !important;
 }
 @media (max-width: 770px) {
-  .mobile {
-    display: none !important;
-  }
   .box_history {
     min-width: 400px;
   }
@@ -55,7 +52,7 @@
   }
 }
 @media (max-width: 340px) {
-   .box_history {
+  .box_history {
     min-width: 300px;
   }
   html {

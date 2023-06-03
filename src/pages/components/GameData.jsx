@@ -25,57 +25,63 @@ export default function GameData({ homeStyle, data, loading, money, history }) {
 
   return (
     <Row>
-      <Col className={homeStyle.mobile}>
-        {resData?.length ? (
-          <>
-            <h3 className={homeStyle.score}>
-              Điểm:{" "}
-              <span
+      {window.innerWidth > 770 && (
+        <Col>
+          {resData?.length ? (
+            <>
+              <h3 className={homeStyle.score}>
+                Điểm:{" "}
+                <span
+                  className={homeStyle.score_value}
+                  style={{
+                    color:
+                      type === "Tài" ? "red" : type === "Xỉu" ? "blue" : "#333",
+                  }}
+                >
+                  {response}
+                </span>
+              </h3>
+              <ul className={homeStyle.list_group}>
+                {resData.map((item, i) => (
+                  <li className="list_item" key={i}>
+                    <Row className={homeStyle.box_icon}>
+                      Xúc Xắc {i + 1}: {item} {getIconDice(parseInt(item))}
+                    </Row>
+                  </li>
+                ))}
+              </ul>
+              <h1
                 className={homeStyle.score_value}
                 style={{
                   color:
                     type === "Tài" ? "red" : type === "Xỉu" ? "blue" : "#333",
                 }}
               >
-                {response}
-              </span>
+                {type}
+              </h1>
+            </>
+          ) : (
+            <>
+              <h3 className="score">Bạn Chưa Đổ Xúc Xắc!</h3>
+            </>
+          )}
+          {loading ? (
+            <h3>Đang Đổ Xúc Xắc...</h3>
+          ) : (
+            <h3>
+              Trang game được tạo bởi{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://duong.vercel.app"
+              >
+                Dương
+              </a>
             </h3>
-            <ul className={homeStyle.list_group}>
-              {resData.map((item, i) => (
-                <li className="list_item" key={i}>
-                  <Row className={homeStyle.box_icon}>
-                    Xúc Xắc {i + 1}: {item} {getIconDice(parseInt(item))}
-                  </Row>
-                </li>
-              ))}
-            </ul>
-            <h1
-              className={homeStyle.score_value}
-              style={{
-                color:
-                  type === "Tài" ? "red" : type === "Xỉu" ? "blue" : "#333",
-              }}
-            >
-              {type}
-            </h1>
-          </>
-        ) : (
-          <>
-            <h3 className="score">Bạn Chưa Đổ Xúc Xắc!</h3>
-          </>
-        )}
-        {loading ? (
-          <h3>Đang Đổ Xúc Xắc...</h3>
-        ) : (
-          <h3>
-            Trang game được tạo bởi{" "}
-            <a target="_blank" rel="noreferrer" href="https://duong.vercel.app">
-              Dương
-            </a>
-          </h3>
-        )}
-        <h2>Tổng ví: {money}$</h2>
-      </Col>
+          )}
+          <h2>Tổng ví: {money}$</h2>
+        </Col>
+      )}
       <Col>
         {history.map(({ response, type, data: resData }, i) => (
           <Row key={i} className={homeStyle.box_history}>

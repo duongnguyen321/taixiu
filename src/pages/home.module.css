@@ -45,4 +45,20 @@
   .mobile {
     display: none !important;
   }
+  .box_history {
+    min-width: 400px;
+  }
+}
+@media (max-width: 400px) {
+  .box_history {
+    min-width: 350px;
+  }
+}
+@media (max-width: 340px) {
+   .box_history {
+    min-width: 300px;
+  }
+  html {
+    font-size: 75%;
+  }
 }

@@ -8,14 +8,14 @@ const { data: getAPIData } = API;
 
 export default function Header({ history: data }) {
   const [history, setHistory] = useState([]);
-  const getData = async () => {
-    const res = await axios.get(getAPIData(30)).then((res) => res.data);
+  const getData = async (count) => {
+    const res = await axios.get(getAPIData(count)).then((res) => res.data);
     if (res.length) {
       setHistory(res);
     }
   };
   useEffect(() => {
-    getData();
+    getData(window.innerWidth < 770 ? 10 : 30);
   }, [data]);
   return (
     <header className={headerStyle.header}>

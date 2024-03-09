@@ -1,7 +1,8 @@
-.btn{
-    border-radius: .5rem;
-    background: var(--seccond_background);
-    font-weight: 600;
-    font-size: 1.5rem;
-    padding: .5rem;
+.btn {
+	border-radius: 0.5rem;
+	background: var(--seccond_background);
+	font-weight: 600;
+	font-size: 1.5rem;
+	padding: 0.5rem;
+	user-select: none;
 }
